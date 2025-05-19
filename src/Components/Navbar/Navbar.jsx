@@ -8,8 +8,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./Navbar.css"
 import {Link} from "react-router-dom"
 const Navbarr = () => {
-  let cartle =JSON.parse(localStorage.getItem("cartitems"))
-  let favle =JSON.parse(localStorage.getItem("favitems"))
+  let cartle =JSON.parse(localStorage.getItem("cartitems") || [])
+  let favle =JSON.parse(localStorage.getItem("favitems") || [])
 
   // console.log(cartle);
   
