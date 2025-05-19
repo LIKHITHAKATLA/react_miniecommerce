@@ -12,7 +12,7 @@ const Recipe = ({ singledetails }) => {
           <span>⭐ {singledetails.rating}</span>
           <span>📝 {singledetails.reviewCount} reviews</span>
         </div>
-        <button onClick={()=>{navigate(`/recipes/${singledetails.id}`)}}>More Details</button>
+        <button onClick={()=>{navigate(`/recipes/${singledetails.id}`)}}>View More </button>
       </div>
     </div>
   );

@@ -20,12 +20,16 @@ const Favs = () => {
     if (!exists) {
       cartitems.push(item);
       localStorage.setItem("cartitems", JSON.stringify(cartitems));
-      alert("Item added to cart!");
+      alert(`${item.name} add to cart.`);
     } else {
-      alert("Item is already in the cart.");
+      alert(`${item.name} is already in the cart.`);
     }
   };
-
+const removeFromCart = (itemToRemove) => {
+    const updatedCart = favitems.filter(item => item.id !== itemToRemove.id);
+    localStorage.setItem("favitems", JSON.stringify(updatedCart));
+    window.location.reload(); // Refresh to update UI
+  };
   return (
     <div className="p-4">
       <h2 style={{ textAlign: "center" }}>Your Favourites</h2>
@@ -50,9 +54,11 @@ const Favs = () => {
                 </td>
                 <td>{val.cuisine}</td>
                 <td>
-                  <button className="btn btn-success" onClick={() => addToCart(val)}>
-                    🛒 Add to Cart
-                  </button>
+                  <button className="btn btn-success me-2" onClick={() => addToCart(val)}>
+  🛒 Add to Cart
+</button>
+<button className="btn btn-danger" onClick={() => removeFromCart(val)}>🗑️ Remove</button>
+
                 </td>
               </tr>
             ))}

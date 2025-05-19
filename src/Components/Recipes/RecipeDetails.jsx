@@ -32,9 +32,9 @@ const RecipeDetails = ({ recipedata }) => {
   if (!exists) {
     favitems.push(pushingitem);
     localStorage.setItem("favitems", JSON.stringify(favitems));
-    alert("Item added to fav!");
+    alert(`${pushingitem.name} add to fav.`);
   } else {
-    alert("Item is already in the fav.");
+    alert(`${pushingitem.name} is already in the fav.`);
   }
 }
 
@@ -54,9 +54,9 @@ const RecipeDetails = ({ recipedata }) => {
   if (!exists) {
     cartitems.push(pushingitem);
     localStorage.setItem("cartitems", JSON.stringify(cartitems));
-    alert("Item added to cart!");
+    alert(`${pushingitem.name} add to Cart.`);
   } else {
-    alert("Item is already in the cart.");
+    alert(`${pushingitem.name} is already in the cart.`);
   }
 
 
