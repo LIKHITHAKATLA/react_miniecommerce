@@ -1,0 +1,21 @@
+.not-found-container {
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+.not-found-image {
+  width: 300px;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.not-found-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.not-found-container p {
+  font-size: 1.2rem;
+  color: #666;
+}
