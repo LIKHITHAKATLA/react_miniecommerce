@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './RecipeDetails.css';
+import './Recipedetails.css';
 import Spinner from 'react-bootstrap/Spinner';
 
 const RecipeDetails = ({ recipedata }) => {
